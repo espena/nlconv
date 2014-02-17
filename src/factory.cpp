@@ -4,16 +4,16 @@ converter::i_converter* converter::factory::
 get_converter( const command_line& cmd ) {
 	i_converter* converter = 0;
 
-	if( cmd.get_flag( "-2dos" ) ) {
+	if( cmd.get_flag( "2dos" ) ) {
 		converter = new converter_2dos();
 	}
-	else if( cmd.get_flag( "-2nix" ) ) {
+	else if( cmd.get_flag( "2nix" ) ) {
 		converter = new converter_2nix();
 	}
-	else if( cmd.get_flag( "-2mac" ) ) {
+	else if( cmd.get_flag( "2mac" ) ) {
 		converter = new converter_2mac();
 	}
-	else if( cmd.get_flag( "-2fix" ) ) {
+	else if( cmd.get_flag( "2fix" ) ) {
 		converter = new converter_2fix();
 	}
 	if( 0 == converter ) {
@@ -31,7 +31,7 @@ get_input( const command_line& cmd ) {
 	_setmode( _fileno( stdout ), _O_BINARY );
 	_setmode( _fileno( stdin ), _O_BINARY );
 #endif
-	std::string i = cmd.get_str( "-i" );
+	std::string i = cmd.get_str( "input" );
 	return i.empty() ? &std::cin : new std::ifstream( i, std::ifstream::binary );
 }
 

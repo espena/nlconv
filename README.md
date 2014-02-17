@@ -6,7 +6,7 @@ Use this tool to switch forth and back between the three different line break co
 - Linux (Line Feed)
 - Apple II and early Mac OS (Carriage Return)
 
-For fixed-length records in a continous file (without line breaks), this tool can split the files into
+For fixed-length records in a continuos file (without line breaks), this tool can split the files into
 multiple lines, one per record. This is crucial for a number of common database import routines, as they
 rely on reading one line at a time.
 
