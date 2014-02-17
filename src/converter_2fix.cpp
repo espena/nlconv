@@ -1,35 +1,20 @@
 #include "../inc/converter_2fix.h"
 
 void converter::converter_2fix::
-init( int argc, char* const argv[] ) {
+init( const converter::command_line& cmd ) {
 	m_conversion_started = false;
 	m_is_utf8 = false;
 	m_char_pos = 0;
 	m_record_delimiter = params::default_delimiter;
-	for( int i = 1; i < argc - 1; i++ ) {
-		std::string arg = argv[ i ];
-		if( "-l" == arg ) {
-			try {
-				std::stringstream ss( argv[ i + 1 ] );
-				ss >> m_record_length;
-				if( m_record_length < 1 ) {
-					throw std::runtime_error( "Parameter -l (length) must be at least 1." );
-				}
-			}
-			catch( ... ) {
-				std::cout << "Invalid record length.";
-				throw;
-			}
-		}
-		else if( "-cr" == arg ) {
-			m_record_delimiter = params::delimiter::str_cr;
-		}
-		else if( "-lf" == arg ) {
-			m_record_delimiter = params::delimiter::str_lf;
-		}
-		else if( "-utf8" == arg ) {
-			m_is_utf8 = true;
-		}
+	m_record_length = cmd.get_int( "-l" );
+	if( cmd.get_flag( "-cr" ) ) {
+		m_record_delimiter = params::delimiter::str_cr;
+	}
+	else if( cmd.get_flag( "-lf" ) ) {
+		m_record_delimiter = params::delimiter::str_lf;
+	}
+	else if( cmd.get_flag( "-crlf" ) ) {
+		m_record_delimiter = params::delimiter::str_crlf;
 	}
 	m_record_delimiter_length = m_record_delimiter.length();
 }

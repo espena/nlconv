@@ -7,16 +7,16 @@
 #include <ios>
 #include <fcntl.h>
 #include "interface/i_converter.h"
-#include "converter_base.h"
+#include "command_line.h"
 #include "converter_2dos.h"
 #include "converter_2nix.h"
 #include "converter_2mac.h"
 #include "converter_2fix.h"
 namespace converter {
 	namespace factory {
-		i_converter* get_converter( int argc, char* const argv[] );
+		i_converter* get_converter( const command_line& cmd );
 		void release( i_converter* converter );
-		std::istream* get_input( int argc, char* const argv[] );
+		std::istream* get_input( const command_line& cmd );
 		void release( std::istream* input );
 	}
 }

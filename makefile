@@ -13,9 +13,9 @@ endif
 
 SOURCEFILES =                           \
 				src/main.cpp                    \
+				src/command_line.cpp            \
 				src/factory.cpp                 \
 				src/conversion.cpp              \
-				src/converter_base.cpp          \
 				src/converter_2dos.cpp          \
 				src/converter_2nix.cpp          \
 				src/converter_2mac.cpp          \

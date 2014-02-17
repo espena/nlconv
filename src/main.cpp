@@ -2,8 +2,9 @@
 int main( int argc, char* argv[] ) {
 	try {
 		if( argc < 2 ) throw std::runtime_error( "Expected at least 1 argument." );
-		converter::i_converter* converter = converter::factory::get_converter( argc, argv );
-		std::istream* input = converter::factory::get_input( argc, argv );
+		converter::command_line cmd( argc, argv );
+		converter::i_converter* converter = converter::factory::get_converter( cmd );
+		std::istream* input = converter::factory::get_input( cmd );
 		char buffer[ converter::params::block_size ];
 		std::streamsize char_count = sizeof buffer;
 		while( char_count == sizeof buffer ) {
