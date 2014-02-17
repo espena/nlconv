@@ -1,3 +1,9 @@
+# SQL server files
+*.mdf
+*.ldf
+*.sdf
+*.opensdf
+
 # Compiled Object files
 *.slo
 *.lo

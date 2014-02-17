@@ -69,6 +69,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="inc\command_line.h" />
     <ClInclude Include="inc\conversion.h" />
     <ClInclude Include="inc\converter_2dos.h" />
     <ClInclude Include="inc\converter_2fix.h" />
@@ -76,19 +77,18 @@
     <ClInclude Include="inc\converter_2nix.h" />
     <ClInclude Include="inc\converter_base.h" />
     <ClInclude Include="inc\converter_params.h" />
+    <ClInclude Include="inc\converter_strings.h" />
     <ClInclude Include="inc\factory.h" />
     <ClInclude Include="inc\interface\i_converter.h" />
-    <ClInclude Include="inc\interface\i_converter_2xxx.h" />
-    <ClInclude Include="inc\interface\i_converter_base.h" />
     <ClInclude Include="inc\main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\command_line.cpp" />
     <ClCompile Include="src\conversion.cpp" />
     <ClCompile Include="src\converter_2dos.cpp" />
     <ClCompile Include="src\converter_2fix.cpp" />
     <ClCompile Include="src\converter_2mac.cpp" />
     <ClCompile Include="src\converter_2nix.cpp" />
-    <ClCompile Include="src\converter_base.cpp" />
     <ClCompile Include="src\factory.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>

@@ -1,5 +1,7 @@
 #include "../inc/factory.h"
-
+#ifdef _WIN32
+#include <io.h>
+#endif
 converter::i_converter* converter::factory::
 get_converter( const command_line& cmd ) {
 	i_converter* converter = 0;

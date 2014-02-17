@@ -49,11 +49,11 @@
     <ClInclude Include="inc\interface\i_converter.h">
       <Filter>Header Files\Interface</Filter>
     </ClInclude>
-    <ClInclude Include="inc\interface\i_converter_2xxx.h">
-      <Filter>Header Files\Interface</Filter>
+    <ClInclude Include="inc\command_line.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\interface\i_converter_base.h">
-      <Filter>Header Files\Interface</Filter>
+    <ClInclude Include="inc\converter_strings.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,13 +72,13 @@
     <ClCompile Include="src\converter_2nix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\converter_base.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\command_line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

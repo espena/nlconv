@@ -34,8 +34,8 @@ command_line( int argc, const char* const argv[] ) {
 		}
 		else if( key.length() > 1 && key.at( 0 ) == '-' && key.at( 1 ) != '-' ) {
 			// Short options
-			std::string::size_type n = key.length();
-			for( int j = 1; j < n; j++ ) {
+			size_t n = key.length();
+			for( size_t j = 1; j < n; j++ ) {
 				switch( key.at( j ) ) {
 					case 'h':	// --help
 						m_flags[ "help" ] = true;
