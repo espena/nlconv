@@ -28,7 +28,7 @@ command_line( int argc, const char* const argv[] ) {
 					m_ints[ key ] = val;
 				}
 				catch( ... ) {
-					std::cout << "Invalid record length.";
+					std::cout << "Invalid record length (parameter -l).";
 					throw;
 				}
 			}
