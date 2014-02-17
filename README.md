@@ -12,7 +12,7 @@ rely on reading one line at a time.
 
 ##Usage
 
-`nlconv { [-2dos] | [-2mac] | [-2nix] | [-2fix -l <length>] } [-utf8] [-i <datafile>]`
+`nlconv { [-2dos] | [-2mac] | [-2nix] | [-2fix -l <length> [ [-cr] | [-lf] | [-crlf] ] ] } [-utf8] [-i <datafile>]`
 
 `nlconv -2dos -i data-mac.txt > data-dos.txt`
 

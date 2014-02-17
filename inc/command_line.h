@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <map>
+#include "converter_strings.h"
 namespace converter {
 	class command_line {
     std::map<std::string, int> m_ints;

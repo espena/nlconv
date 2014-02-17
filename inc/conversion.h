@@ -2,6 +2,7 @@
 #define __CONVERSION_H__
 #include <ios>
 #include "converter_params.h"
+#include "converter_strings.h"
 namespace converter {
 	class conversion {
 		std::streamsize m_char_count;

@@ -7,6 +7,7 @@
 #include <ios>
 #include <fcntl.h>
 #include "interface/i_converter.h"
+#include "converter_strings.h"
 #include "command_line.h"
 #include "converter_2dos.h"
 #include "converter_2nix.h"

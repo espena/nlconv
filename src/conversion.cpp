@@ -22,7 +22,7 @@ put( char c ) {
 		m_buffer[ m_char_count++ ] = c;
 	}
 	else {
-		throw std::runtime_error( "Conversion buffer overflow: Subscript out of range." );
+		throw std::runtime_error( strings::err_conversion_buffer_overflow );
 	}
 }
 

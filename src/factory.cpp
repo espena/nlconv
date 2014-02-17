@@ -17,7 +17,7 @@ get_converter( const command_line& cmd ) {
 		converter = new converter_2fix();
 	}
 	if( 0 == converter ) {
-		throw std::runtime_error( "No appropriate converter found." );
+		throw std::runtime_error( strings::err_no_converter_found );
 	}
 	else {
 		converter->init( cmd );
