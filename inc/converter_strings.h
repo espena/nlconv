@@ -8,7 +8,7 @@ namespace converter {
 		const char* const err_too_few_arguments 							= "Too few arguments. Expected at least 1.";
 		const char* const err_unknown_short_parameter					= "Unknown short parameter.";
 		const char* const msg_usage														= "Usage:";
-		const char* const msg_usage_syntax 										= "nlconv { [--2dos] | [--2mac] | [--2nix] | [--2fix --length <length> [ [--cr] | [--lf] | [--crlf] ] ] } [--utf8] [--input <datafile>]";
+		const char* const msg_usage_syntax 										= "nlconv { [--2dos] | [--2mac] | [--2nux] } [--fixlength <length>] [--utf8] [--input <sourcefile>]";
 	};
 }
 #endif
