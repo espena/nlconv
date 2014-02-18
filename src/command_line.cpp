@@ -8,9 +8,6 @@ command_line( int argc, const char* const argv[] ) {
 			"--2dos"	== key ||
 			"--2mac"	== key ||
 			"--2nux"	== key ||
-			"--cr"		== key ||
-			"--lf"		== key ||
-			"--crlf"	== key ||
 			"--utf8"	== key )
 		{
 			m_flags[ key.substr( 2, std::string::npos ) ] = true;

@@ -3,7 +3,7 @@
 void converter::converter_2fix::
 init( const converter::command_line& cmd ) {
 	m_conversion_started = false;
-	m_is_utf8 = false;
+	m_is_utf8 = cmd.get_flag( "utf8" );
 	m_char_pos = 0;
 	m_record_delimiter = params::default_delimiter;
 	m_record_length = cmd.get_int( "fixlength" );
@@ -15,7 +15,7 @@ init( const converter::command_line& cmd ) {
 	}
 	else if( cmd.get_flag( "2dos" ) ) {
 		m_record_delimiter = params::delimiter::str_crlf;
-	}
+	}	
 	m_record_delimiter_length = m_record_delimiter.length();
 }
 
