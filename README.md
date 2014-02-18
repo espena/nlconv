@@ -53,7 +53,7 @@ UTF-8 encoded, use the --utf8 option, unless a UTF-8 byte-order marker (BOM) is 
 of the file. This parameter is optional in that the user may pipe the input data into nlconv instead of
 specifying a sourcefile (see below).
 
-To convert a file with mac-formatted newlines to a new file witn dos-style newlines:
+To convert a file with mac-formatted newlines to a new file with dos-style newlines:
 
 `nlconv --2dos --input data-mac-formatted.txt > data-dos-formatted.txt`
 
