@@ -8,9 +8,30 @@ Use this tool to switch forth and back between the three different line break co
 
 For fixed-length records in a continuous file (without line breaks), this tool can split the files into
 multiple lines, one per record. This is crucial for a number of common database import routines, as they
-rely on reading one line at a time.
+rely on aquiring the data on a line-by-line basis.
 
 ##Usage
+
+`nlconv mode [options] --input <file>`
+
+  mode:
+  <table>
+    <tr><td>-d, --2dos</td><td>Use DOS/Windows style line breaks (Cr+Lf)</td></tr>
+    <tr><td>-m, --2mac</td><td>Use Apple II style line breaks (Cr)</td></tr>
+    <tr><td>-n, --2nux</td><td>Use Linux style line breaks (Lf)</td></tr>
+    <tr><td>-h, --help</td><td>Display usage description.</td></tr>
+  </table>
+
+  options:
+  <table>
+    <tr><td>-u, --utf8</td><td>Specify that the input file is UTF-8 encoded.</td></tr>
+    <tr><td>-l, --fixlength <recordlength></td><td>For fixed-length input files without line breaks, use this parameter to specify the record length.</td></tr>
+  </table>
+  
+  `nlconv { [--2dos] | [--2mac] | [--2nix] ] } [--fixlength <length>] [--utf8] [--input <datafile>]`
+
+
+
 
 `nlconv { [--2dos] | [--2mac] | [--2nix] | [--2fix --length <length> [ [--cr] | [--lf] | [--crlf] ] ] } [--utf8] [--input <datafile>]`
 
