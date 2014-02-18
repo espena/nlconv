@@ -14,7 +14,7 @@ rely on aquiring the data on a line-by-line basis.
 
 _nlconv mode [options] [--input &lt;sourcefile&gt;]_
 
-*mode:*
+*mode*
 <table>
   <tr>
     <td>-d</td><td>--2dos</td>
@@ -34,7 +34,7 @@ _nlconv mode [options] [--input &lt;sourcefile&gt;]_
   </tr>
 </table>
 
-*options:*
+*options*
 <table>
   <tr>
     <td>-u</td><td>--utf8</td>
@@ -46,7 +46,7 @@ _nlconv mode [options] [--input &lt;sourcefile&gt;]_
   </tr>
 </table>
 
-*sourcefile:*
+*sourcefile*
 
 Path to the text file to be converted. If the --fixlength parameter is used, and the input file is
 UTF-8 encoded, use the --utf8 option, unless a UTF-8 byte-order marker (BOM) is present at the beginning
@@ -58,10 +58,8 @@ To convert a file with mac-formatted newlines to a new file witn dos-style newli
 `nlconv --2dos --input data-mac-formatted.txt > data-dos-formatted.txt`
 
 ###Piping
-In addition to reading --input &lt;sourcefile&gt;, _nlconv_ also accepts piped input. This example works
-on Windows, OS X and Linux:
+In addition to reading --input &lt;sourcefile&gt;, _nlconv_ also accepts piped input. The following example
+works on Windows, OS X and Linux:
 
 `echo foobarfoobarfoobar | nlconv --2nux --fixlength 3`
-
-
 
