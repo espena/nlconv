@@ -14,7 +14,7 @@ rely on aquiring the data on a line-by-line basis.
 
 _nlconv mode [options] --input <file>_
 
-  mode:
+  _mode:_
   <table>
     <tr><td>-d</td><td>--2dos</td><td>Use DOS/Windows style line breaks (Cr+Lf)</td></tr>
     <tr><td>-m</td><td>--2mac</td><td>Use Apple II style line breaks (Cr)</td></tr>
@@ -22,10 +22,10 @@ _nlconv mode [options] --input <file>_
     <tr><td>-h</td><td>--help</td><td>Display usage description.</td></tr>
   </table>
 
-  options:
+  _options:_
   <table>
     <tr><td>-u</td><td>--utf8</td><td>Specify that the input file is UTF-8 encoded.</td></tr>
-    <tr><td>-l</td><td>--fixlength &lt;recordlength&gt;</td><td>For fixed-length files without line breaks. Specifies record length.</td></tr>
+    <tr><td>-l</td><td>--fixlength &lt;recordlength&gt;</td><td>Specify record length. For fixed-length files without line breaks.</td></tr>
   </table>
   
   `nlconv { [--2dos] | [--2mac] | [--2nix] ] } [--fixlength <length>] [--utf8] [--input <datafile>]`
