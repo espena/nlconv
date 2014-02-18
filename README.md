@@ -12,22 +12,43 @@ rely on aquiring the data on a line-by-line basis.
 
 ##Usage
 
-_nlconv mode [options] --input <file>_
+_nlconv mode [options] --input &lt;sourcefile&gt;_
 
-  _mode:_
+  *mode:*
   <table>
-    <tr><td>-d</td><td>--2dos</td><td>Use DOS/Windows style line breaks (Cr+Lf)</td></tr>
-    <tr><td>-m</td><td>--2mac</td><td>Use Apple II style line breaks (Cr)</td></tr>
-    <tr><td>-n</td><td>--2nux</td><td>Use Linux style line breaks (Lf)</td></tr>
-    <tr><td>-h</td><td>--help</td><td>Display usage description.</td></tr>
+    <tr>
+      <td>-d</td><td>--2dos</td>
+      <td>Use DOS/Windows style line breaks (Cr+Lf)</td>
+    </tr>
+    <tr>
+      <td>-m</td><td>--2mac</td>
+      <td>Use Apple II style line breaks (Cr)</td>
+    </tr>
+    <tr>
+      <td>-n</td><td>--2nux</td>
+      <td>Use Linux style line breaks (Lf)</td>
+    </tr>
+    <tr>
+      <td>-h</td><td>--help</td>
+      <td>Display usage description.</td>
+    </tr>
   </table>
 
-  _options:_
+  *options:*
   <table>
-    <tr><td>-u</td><td>--utf8</td><td>Specify that the input file is UTF-8 encoded.</td></tr>
-    <tr><td>-l</td><td>--fixlength &lt;recordlength&gt;</td><td>Specify record length. For fixed-length files without line breaks.</td></tr>
+    <tr>
+      <td>-u</td><td>--utf8</td>
+      <td>Specify that the input file is UTF-8 encoded.</td>
+    </tr>
+    <tr>
+      <td>-l</td><td>--fixlength &lt;recordlength&gt;</td>
+      <td>Specify record length. For fixed-length files without line breaks.</td>
+    </tr>
   </table>
   
+  *sourcefile:*
+  The text file to be converted. If the input file is an UTF-8 encoded file, use the --utf8 option unless a UTF-8 byte-order marker (BOM) is present.
+
   `nlconv { [--2dos] | [--2mac] | [--2nix] ] } [--fixlength <length>] [--utf8] [--input <datafile>]`
 
 
