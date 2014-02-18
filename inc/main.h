@@ -4,6 +4,7 @@
 #include <istream>
 #include <fstream>
 #include <string>
+#include <stdexcept>
 #include "command_line.h"
 #include "converter_params.h"
 #include "converter_strings.h"

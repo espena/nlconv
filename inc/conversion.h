@@ -1,6 +1,7 @@
 #ifndef __CONVERSION_H__
 #define __CONVERSION_H__
 #include <ios>
+#include <stdexcept>
 #include "converter_params.h"
 #include "converter_strings.h"
 namespace converter {

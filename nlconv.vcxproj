@@ -75,7 +75,6 @@
     <ClInclude Include="inc\converter_2fix.h" />
     <ClInclude Include="inc\converter_2mac.h" />
     <ClInclude Include="inc\converter_2nix.h" />
-    <ClInclude Include="inc\converter_base.h" />
     <ClInclude Include="inc\converter_params.h" />
     <ClInclude Include="inc\converter_strings.h" />
     <ClInclude Include="inc\factory.h" />

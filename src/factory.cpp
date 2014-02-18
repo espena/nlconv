@@ -34,7 +34,7 @@ get_input( const command_line& cmd ) {
 	_setmode( _fileno( stdin ), _O_BINARY );
 #endif
 	std::string i = cmd.get_str( "input" );
-	return i.empty() ? &std::cin : new std::ifstream( i, std::ifstream::binary );
+	return i.empty() ? &std::cin : new std::ifstream( i.c_str(), std::ifstream::binary );
 }
 
 void converter::factory::

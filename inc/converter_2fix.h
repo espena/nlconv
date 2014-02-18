@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <cstring>
 #include <cmath>
 #include "converter_params.h"
 #include "interface/i_converter.h"

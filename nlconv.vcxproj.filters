@@ -34,9 +34,6 @@
     <ClInclude Include="inc\converter_2nix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\converter_base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="inc\converter_params.h">
       <Filter>Header Files</Filter>
     </ClInclude>

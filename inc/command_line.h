@@ -1,5 +1,6 @@
 #ifndef __COMMAND_LINE_H__
 #define __COMMAND_LINE_H__
+#include <stdexcept>
 #include <iostream>
 #include <string>
 #include <sstream>
