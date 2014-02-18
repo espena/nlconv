@@ -6,14 +6,14 @@ init( const converter::command_line& cmd ) {
 	m_is_utf8 = false;
 	m_char_pos = 0;
 	m_record_delimiter = params::default_delimiter;
-	m_record_length = cmd.get_int( "length" );
-	if( cmd.get_flag( "cr" ) ) {
+	m_record_length = cmd.get_int( "fixlength" );
+	if( cmd.get_flag( "2mac" ) ) {
 		m_record_delimiter = params::delimiter::str_cr;
 	}
-	else if( cmd.get_flag( "lf" ) ) {
+	else if( cmd.get_flag( "2nux" ) ) {
 		m_record_delimiter = params::delimiter::str_lf;
 	}
-	else if( cmd.get_flag( "crlf" ) ) {
+	else if( cmd.get_flag( "2dos" ) ) {
 		m_record_delimiter = params::delimiter::str_crlf;
 	}
 	m_record_delimiter_length = m_record_delimiter.length();

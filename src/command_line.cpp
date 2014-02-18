@@ -8,7 +8,6 @@ command_line( int argc, const char* const argv[] ) {
 			"--2dos"	== key ||
 			"--2mac"	== key ||
 			"--2nux"	== key ||
-			"--2fix"	== key ||
 			"--cr"		== key ||
 			"--lf"		== key ||
 			"--crlf"	== key ||
@@ -20,12 +19,13 @@ command_line( int argc, const char* const argv[] ) {
 			std::string val = argv[ i + 1 ];
 			m_strs[ "input" ] = val;
 		}
-		else if( ( "--length" == key || "-l" == key ) && i < ( argc - 1 ) ) {
+		else if( ( "--fixlength" == key || "-l" == key ) && i < ( argc - 1 ) ) {
 			try {
 				int val = 0;
 				std::stringstream ss( argv[ i + 1 ] );
 				ss >> val;
-				m_ints[ "length" ] = val;
+				m_flags[ "2fix" ] = true;
+				m_ints[ "fixlength" ] = val;
 			}
 			catch( ... ) {
 				std::cout << strings::err_invalid_record_length_parameter;
@@ -54,15 +54,6 @@ command_line( int argc, const char* const argv[] ) {
 						break;
 					case 'u':	// --utf8
 						m_flags[ "utf8" ] = true;
-						break;
-					case 'C':	// --cr
-						m_flags[ "cr" ] = true;
-						break;
-					case 'L':	// --lf
-						m_flags[ "lf" ] = true;
-						break;
-					case 'R':	// --crlf
-						m_flags[ "crlf" ] = true;
 						break;
 					default:
 						throw std::runtime_error( strings::err_unknown_short_parameter );
