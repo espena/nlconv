@@ -7,7 +7,7 @@
 namespace converter {
 	class conversion {
 		std::streamsize m_char_count;
-		char m_buffer[ params::block_size * 2 ];
+		char m_buffer[ params::block_size * ( params::max_delimiter_size + 1 ) ];
 		char m_last_char;
 	public:
 		~conversion() { };
