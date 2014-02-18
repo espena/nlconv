@@ -39,7 +39,7 @@ translate( const char* in_buffer, std::streamsize in_char_count ) {
 			}
 		}
 		
-		if( ++m_char_pos == m_record_length ) {
+		if( ++m_char_pos > m_record_length ) {
 			// Insert delimiter
 			for( std::string::size_type j = 0; j < m_record_delimiter_length; j++ ) {
 				m_conversion.put( m_record_delimiter.at( j ) );

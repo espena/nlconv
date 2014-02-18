@@ -4,23 +4,23 @@ converter::command_line::
 command_line( int argc, const char* const argv[] ) {
 	for( int i = 0; i < argc; i++ ) {
 		std::string key = argv[ i ];
-		if( key == "--help" ||
-				key == "--2dos" ||
-				key == "--2mac" ||
-				key == "--2nux" ||
-				key == "--2fix" ||
-				key == "--cr"   ||
-				key == "--lf"   ||
-				key == "--crlf" ||
-				key == "--utf8" )
+		if(	"--help"	== key ||
+			"--2dos"	== key ||
+			"--2mac"	== key ||
+			"--2nux"	== key ||
+			"--2fix"	== key ||
+			"--cr"		== key ||
+			"--lf"		== key ||
+			"--crlf"	== key ||
+			"--utf8"	== key )
 		{
 			m_flags[ key.substr( 2, std::string::npos ) ] = true;
 		}
-		else if( ( key == "--input" || key == "-i" ) && i < ( argc - 1 ) ) {
+		else if( ( "--input" == key || "-i" == key ) && i < ( argc - 1 ) ) {
 			std::string val = argv[ i + 1 ];
 			m_strs[ "input" ] = val;
 		}
-		else if( ( key == "--length" || key == "-l" ) && i < ( argc - 1 ) ) {
+		else if( ( "--length" == key || "-l" == key ) && i < ( argc - 1 ) ) {
 			try {
 				int val = 0;
 				std::stringstream ss( argv[ i + 1 ] );
@@ -84,5 +84,5 @@ get_flag( std::string key ) const {
 
 std::string converter::command_line::
 get_str( std::string key ) const {
-	return m_strs.find( key ) == m_strs.end() ? 0 : m_strs.find( key )->second;
+	return m_strs.find( key ) == m_strs.end() ? "" : m_strs.find( key )->second;
 }
