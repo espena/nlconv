@@ -12,7 +12,7 @@ rely on aquiring the data on a line-by-line basis.
 
 ##Usage
 
-`nlconv mode [options] --input <file>`
+_nlconv mode [options] --input <file>_
 
   mode:
   <table>
@@ -25,7 +25,7 @@ rely on aquiring the data on a line-by-line basis.
   options:
   <table>
     <tr><td>-u</td><td>--utf8</td><td>Specify that the input file is UTF-8 encoded.</td></tr>
-    <tr><td>-l</td><td>--fixlength <recordlength></td><td>For fixed-length files without line breaks. Specifies record length.</td></tr>
+    <tr><td>-l</td><td>--fixlength &lt;recordlength&gt;</td><td>For fixed-length files without line breaks. Specifies record length.</td></tr>
   </table>
   
   `nlconv { [--2dos] | [--2mac] | [--2nix] ] } [--fixlength <length>] [--utf8] [--input <datafile>]`
